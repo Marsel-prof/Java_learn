@@ -254,6 +254,7 @@ import java.util.Scanner;
         map.replace("key2","value3");//? to change value by key
         System.out.println(new Student("marcel",21,(byte) 10).whoAmI());
         System.out.println(new Teacher("marcel",21,(byte) 10).whoAmI());*/
+        // Exception => to solve errors
         Scanner s = new Scanner(System.in);
         System.out.println("Enter your number");
         try {// this is to solve exception and complete the program without crashing
