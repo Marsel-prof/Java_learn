@@ -1,6 +1,8 @@
 package models;
-public class Person {
-    // the good practice is prevent access to the instance variable from outside the class
+public abstract class Person { //# we add abstract keyword here because if we create object i can't access on
+    //# abstract methods because it doesn't have body
+    //% so after add abstract keyword i can't create object from Person class
+    /*// the good practice is prevent access to the instance variable from outside the class
     //? so we will make them private and then make setter and getter methods
     private String Name ;
     private byte Age ;
@@ -37,5 +39,32 @@ public class Person {
 
     public void setName(String name) {
         Name = name;
+    }*/
+    protected String name ;//! because this attribute is private i can't access on it outside this class
+    protected int age ;//? but because this attribute is protected i can access on it form inherit classes
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
+    public Person(){
+
+    }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public abstract String whoAmI(); //? after add abstract i should implement this function in each subclass
 }
